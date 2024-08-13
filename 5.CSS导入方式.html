@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--CSS 三种导入方式
+下面是三种常见的 CSS 导入方式:
+1.`内联样式(Inline styles):` 将样式规则直接写在 HTML 元素的 style 属性中
+2.`内部样式表(Internal Stylesheet):` 将样式规则写在 HTML 文档的 head 部分的 style 标签中
+3.`外部样式表(External Stylesheet):` 将样式规则写在外部的 CSS 文件中, 然后在 HTML 文档中通过 link 标签引入
+三种导入方式的优先级:内联样式>内部样式表>外部样式表
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS导入方式</title>
+    <link rel="stylesheet" href="./css/style.css"> <!-- 外部样式表 -->
+    <style>
+        p{
+            color: red;
+            font-size: 20px;
+        }
+        h2{
+            color: blue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>这是一个应用了CSS样式的文本</p> 
+    <h1 style="color:aqua">这是一个一级标题标签，使用内联样式</h1>
+    <h2>这是一个二级标题标签，使用内部样式</h2>
+    <h3>这是一个三级标题，应用外部样式</h3>
+</body>
+</html> 

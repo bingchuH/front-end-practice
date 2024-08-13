@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 基本语法</title>
+</head>
+<body>
+    <script>
+        var x; // 声明变量具有函数作用域
+        let y = 5;  // 声明变量具有块级作用域
+        const PI = 3.1415926;   // 声明常量
+        console.log(x, y, PI);
+
+        let name = '张三';
+        console.log(name);
+        let empty = null;
+        console.log(empty);
+
+        // undefined和null的区别：
+        // undefined表示一个变量已经声明但是没有赋值，null表示一个变量已经声明并且赋值为null
+        console.log(undefined == null); // true
+
+        //条件语句
+        // let time = 10;
+        // if (time < 10) {
+        //     alert('Good morning!');
+        // } else if (time < 20) {
+        //     alert('Good day!');
+        // } else {
+        //     alert('Good evening!');
+        // }
+
+        //循环语句
+        console.log('for循环');
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+        
+        console.log('while循环');
+        let j = 0;
+        while (j < 5) {
+            console.log(j);
+            j++;
+        }
+
+        console.log('break和continue');
+        for (let i = 0; i < 5; i++) {
+            if (i == 3) {
+                break;
+            }
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

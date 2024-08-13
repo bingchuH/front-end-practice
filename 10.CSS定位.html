@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS定位</title>
+    <style>
+        .box1{
+            height: 350px;
+            background-color: pink;
+        }
+        .box-normal{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box-relative{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            left: 20px;
+            top: 50px;
+
+        }
+        .box2{
+            height: 350px;
+            background-color: yellow;
+        }
+        .box-absolute{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            left: 20px;
+        }
+        .box-fixed{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: fixed;
+            right: 0;
+            top: 300px;
+
+        }
+    </style>
+</head>
+<body>
+<!-- 定位
+定位布局可以精准定位，但缺乏灵活性
+定位方式:
+相对定位:相对于元素在文档流中的正常位置进行定位。
+绝对定位:相对于其最近的已定位祖先元素进行定位，不占据文档流。
+固定定位:相对于浏览器窗口进行定位。不占据文档流，固定在屏幕上的位置，不随滚动而移动。 -->
+
+    <h1>相对定位</h1>
+    <div class="box1">
+        <div class="box-normal"></div>
+        <div class="box-relative"></div>
+        <div class="box-normal"></div>
+    </div>
+
+    <h1>绝对定位</h1>
+    <div class="box2">
+        <div class="box-normal"></div>
+        <div class="box-absolute"></div>
+        <div class="box-normal"></div>
+    </div>
+
+    <h1>固定定位</h1>
+    <div class="box1">
+        <div class="box-normal"></div>
+        <div class="box-fixed"></div>
+        <div class="box-normal"></div>
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 事件</title>
+</head>
+<!-- 事件是文档或浏览器窗口中发生的特定瞬间，例如用户的点击、键盘的按下、
+页面的加载等。常见的事件如下:
+事件            描述
+onClick         点击事件
+onMouseOver     鼠标经过
+onMouseOut      鼠标移出
+onChange        文本内容改变事件
+onSelect        文本框选中
+onFocus         光标聚集
+onBlur          移开光标 -->
+
+<!-- JavaScript 绑定事件的方法有三种:
+1.`HTML`属性
+2.`DOM属性方法
+3.`addEventListener -->
+<body>
+    <button onclick="clickEvent()">这是一个点击事件按钮</button>
+    <input type="text" onfocus="focusEvent()" onblur="blurEvent()">
+    <script>
+        //点击事件
+        function clickEvent(){
+            alert("这是一个点击事件");
+        }
+
+        //聚焦事件
+        function focusEvent(){
+            console.log("获取焦点");
+        }
+        //失焦事件
+        function blurEvent(){
+            console.log("失去焦点");
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS浮动</title>
+    <style>
+        .father{
+            background-color: pink;
+            height: 150px;
+            border: 3px solid black;
+        }
+        .left-son{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .right-son{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            float: right;
+        }
+
+        .father2{
+            background-color: pink;
+            /* height: 150px; */
+            border: 3px solid black;
+            overflow: auto;
+        }
+        .father3{
+            background-color: pink;
+            /* height: 150px; */
+            border: 3px solid black;
+        }
+        .father3::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<!-- 在学习浮动之前，先了解传统的网页布局方式
+网页布局方式有以下五种:
+标准流(普通流、文档流):网页按照元素的书写顺序依次排列
+浮动
+定位
+Flexbox`和`Grid`(自适应布局)
+标准流`是由块级元素和行内元素按照默认规定的方式来排列，块级就是占一行，行内元素一行放好多个元素。 -->
+
+<!-- 浮动
+元素脱离文档流，根据开发者的意愿漂浮到网页的任意方向。
+"浮动"属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘，这样即可使得元素进行浮动。
+语法:
+选择器{
+    float: left/right/none;
+}
+注意:浮动是相对于父元素浮动，只会在父元素的内部移动 -->
+
+
+<!-- 浮动的特点
+脱标:脱离标准流。
+一行显示，顶部对齐。
+具备行内块元素特性
+-->
+
+    <div class="father">
+        <div class="left-son">左浮动1</div>
+        <div class="left-son">左浮动2</div>
+        <div class="left-son">左浮动3</div>
+        <div class="left-son">左浮动4</div>
+        <div class="right-son">右浮动</div>
+    </div>
+
+    <!-- overflow：溢出内容处理
+    设置父元素的overflow属性为 auto 或 hidden 会创建一个新的块格式化上下文
+    在 BFC中，浮动元素会被包含在父元素的边界内，从而解决浮动引起的高度塌陷问题
+    overflow: auto会自动处理溢岀的内容,而·overflow: hidden 会隐藏溢出的部分。 -->
+    <br>
+    <div class="father2">
+        <div class="left-son">左浮动</div>
+        <div class="right-son">右浮动</div>
+    </div>
+
+    <!-- 伪元素清除法 -->
+     <br>
+     <div class="father3">
+        <div class="left-son">左浮动</div>
+        <div class="right-son">右浮动</div>
+     </div>
+</body>
+</html>

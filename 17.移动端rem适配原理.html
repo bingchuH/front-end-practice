@@ -1,0 +1,58 @@
+<!-- 响应式布局实现方法
+主流的实现方案有两种:
+1.通过`rem`、'vw/vh`等单位，实现在不同设备上显示相同比例进而实现适配
+2.响应式布局，通过媒体查询@media实现一套 HTML配合多套 CSS 实现适配 -->
+<!-- 
+Viewport（了解 VSCode 中自动生成的 head 标签中的`viewport）
+viewport`可以翻译为`视区`或者视口`。是指浏览器用来显示网页的区域，它决定了网页在用户设备上的显示效果。
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no":
+1.width=device-width`:将视口的宽度设置为设备的宽度。这确保网页内容不会被缩放，而是按照设备的实际
+宽度进行布局;
+initia1-scale=1.0:设置初始的缩放级别为 1.0。这也有助于确保网页在加载时以原始大小显示，而不是被2缩小或放大;
+`minimum-scale=1.0`:最小缩放比例为1;3
+Imaximum-scale=1.0`:最大缩放比例为1:
+Suser-scalable=no`:不允许用户缩放 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动端rem适配原理</title>
+    <style>
+        /* html{
+            font-size: 20px;
+        } */
+        .box-px{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            margin-bottom: 50px;
+        }
+        .box-rem{
+            width: 5rem;
+            height: 3rem;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.mi.com/html/index.html">rem示例</a>
+    <a href="https://docs.geeksman.com/">响应式布局示例</a>
+
+    <div class="box-px"></div>
+    <div class="box-rem"></div>
+
+    <script>
+        //根据设备宽度计算HTML的font-size
+        function resetHtmlFontSize(){
+            document.documentElement.style.fontSize = screen.width / 10 + 'px';
+        }
+        resetHtmlFontSize();
+        //监听窗口大小变化
+        window.onresize = resetHtmlFontSize;
+    </script>
+
+
+</body>
+</html>

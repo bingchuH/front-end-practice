@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML表单</title>
+</head>
+<body>
+    <form>
+        <!--form元素用于创建一个表单，它可以包含各种表单元素，例如输入框、按钮、下拉框等-->
+
+        <!--input元素用于创建一个输入框，type属性用于指定输入框的类型，例如文本框、密码框、单选框等-->
+        <!--for属性用于指定与输入框关联的标签，当单击标签时，输入框会获得焦点-->
+        <label for="username">用户名：</label>
+        <input type="text" id="username" placeholder="请输入用户名">
+        <br>
+        <label for="pwd">密码：</label>
+        <input type="password" id = "pwd"value="请输入密码">
+
+        <!--单选框， name属性用于指定单选框的名称，name值相同的几个单选框为一组，只能选择其中一个-->
+        <br>
+        <label>性别：</label>
+        <input type="radio" name ="gender"> 男
+        <input type="radio" name="gender"> 女
+        <!--多选框-->
+        <br>
+        <label>爱好：</label>
+        <input type="checkbox"> 读书
+        <input type="checkbox"> 旅游
+        <input type="checkbox"> 美食
+        <!--下拉框-->
+        <br>
+        <label for="city">城市：</label>
+        <select id="city">
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="guangzhou">广州</option>
+        </select>
+
+        <!--提交-->
+        <br>
+        <input type="submit" value="提交">
+
+    </form>
+
+    <!--action属性用于指定表单提交的地址，method属性用于指定表单提交的方式，可以是get或post-->
+    <form action="#"></form>
+</body>
+</html>

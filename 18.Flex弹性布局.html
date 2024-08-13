@@ -1,0 +1,86 @@
+<!-- Flex 容器属性:
+flex-direction`
+flex-wrap'
+flex-flow`:`flex-direction`属性和`flex-wrap`属性的简写形式;
+justify-content
+align-items
+align-content`:多轴线对齐方式, -->
+
+<!-- flex-direction: 设置主轴（main axis）的方向，即子元素在容器中的排列方向。
+row: 默认值，子元素在水平方向从左到右排列。
+row-reverse: 子元素在水平方向从右到左排列。
+column: 子元素在垂直方向从上到下排列。
+column-reverse: 子元素在垂直方向从下到上排列。 -->
+
+<!-- flex-wrap 控制 Flex 容器中的子元素在主轴空间不足时是否换行。
+nowrap（默认值）：所有子元素都在一行中排列，超出的部分可能会溢出容器。
+wrap：子元素会在主轴空间不足时换行，下一行将按默认的排列方向排列。
+wrap-reverse：子元素会换行，但新行的顺序是反向的，最后一行在最上面。 -->
+
+<!-- flex-flow 是 flex-direction 和 flex-wrap 的简写属性，用于同时定义主轴方向和是否换行。
+语法：flex-flow: <flex-direction> <flex-wrap>;
+flex-direction 决定主轴方向，可以是 row、row-reverse、column 或 column-reverse。
+flex-wrap 决定子元素是否换行，可以是 nowrap、wrap 或 wrap-reverse。 -->
+
+<!-- justify-content: 定义子元素在主轴方向上的对齐方式。
+flex-start: 子元素靠近主轴的起点对齐。
+flex-end: 子元素靠近主轴的终点对齐。
+center: 子元素在主轴上居中对齐。
+space-between: 子元素在主轴上均匀分布，首尾子元素贴近容器两端。
+space-around: 每个项目两侧的间隔相等。因此，项目之间的间隔将是项目与容器边缘之间间隔的两倍。 -->
+
+<!-- align-items: 定义子元素在交叉轴（cross axis）上的对齐方式。
+stretch: 默认值，子元素在交叉轴上拉伸以适应容器。
+flex-start: 子元素靠近交叉轴的起点对齐。
+flex-end: 子元素靠近交叉轴的终点对齐。
+center: 子元素在交叉轴上居中对齐。
+baseline: 子元素的基线对齐。 -->
+
+<!-- align-content 属性在有多行（或多列）子元素的情况下，定义这些行在交叉轴（通常是垂直方向）上的对齐方式。这个属性只有在多行子元素时才有效，即 flex-wrap 设置为 wrap 或 wrap-reverse 时才有作用。
+stretch（默认值）：行将会拉伸以填满容器的交叉轴。
+flex-start：行在容器的交叉轴起点对齐。
+flex-end：行在容器的交叉轴终点对齐。
+center：行在容器的交叉轴中间对齐。
+space-between：行在容器的交叉轴上均匀分布，首行与末行贴近容器两端。
+space-around：行在容器的交叉轴上均匀分布，行之间的间隔相等。 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex弹性盒子</title>
+    <style>
+        html{
+            font-size: 16px;
+        }
+        .container{
+            height: 40rem;
+            display: flex;  /* 设置容器为flex布局 */
+            background-color: aqua;
+            /* flex-direction: row; */
+            flex-wrap: wrap;
+            /* justify-content: center */
+            align-items: center;
+            /* align-content: center;  */
+        }
+        .item{
+            width: 30rem;
+            font-size: 8rem;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 
+        .item*6{$} 快捷方式生成6个div元素
+        -->
+        <div class="item" style="background-color: blueviolet;">1</div>
+        <div class="item" style="background-color: green">2</div>
+        <div class="item" style="background-color: rgb(79, 27, 84)">3</div>
+        <div class="item" style="background-color: rgb(183, 255, 183)">4</div>
+        <div class="item" style="background-color: rgb(120, 85, 176)">5</div>
+        <div class="item" style="background-color: rgb(240, 202, 172)">6</div>
+    </div>
+</body>
+</html>
